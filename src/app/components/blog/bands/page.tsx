@@ -2,80 +2,73 @@ import Image from "next/image";
 import React from "react";
 import { PiMicrophoneStageBold } from "react-icons/pi";
 
-const page = () => {
+const Page = () => {
   return (
-    <section className="text-gray-600 body-font">
-      <h1 className="text-3xl font-bold text-gray-900 ml-16 mt-8">Bands</h1>
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-wrap -m-4">
-          <div className="p-4 md:w-1/3">
-            <div className="h-full border-2 border-gray-400 border-opacity-60 rounded-lg overflow-hidden">
-              <Image
-                className="lg:h-48 md:h-36 w-full object-cover object-center"
-                src="/YS.jpeg"
-                alt="YS"
-                width={400}
-                height={700}
-              />
-              <div className="p-6">
-                <h2 className="flex gap-2 tracking-widest text-xs title-font font-medium text-gray-600 mb-1">
-                  Bands <PiMicrophoneStageBold className="text-lg" />
-                </h2>
-                <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                  <a href="https://youtu.be/JiF9anzVqM4?si=lfbrrA9o1J12TGD0">Young Stunners</a>
-                </h1>
-                <p className="leading-relaxed mb-3">
-                  Young Stunners: Redefining Pakistans hip-hop scene with raw
-                  talent, authentic stories, and unforgettable beats.
-                </p>
-              </div>
+    <section className="font-['Inter',sans-serif] text-gray-700 bg-gradient-to-b from-[#fdfdfd] to-[#f4f6f8] min-h-screen">
+      {/* Section Heading */}
+      <div className="container mx-auto px-6 pt-16">
+        <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight relative inline-block mb-14
+          after:content-[''] after:absolute after:w-20 after:h-1 after:bottom-[-8px] after:left-0">
+          Bands
+        </h1>
+
+        {/* Cards Grid */}
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          {/* Card 1 */}
+          <div className="bg-white rounded-3xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transform transition duration-300 ease-in-out overflow-hidden flex flex-col">
+            <Image
+              src="/YS.jpeg"
+              alt="Young Stunners"
+              width={400}
+              height={700}
+              className="w-full h-64 object-cover rounded-t-3xl"
+            />
+            <div className="p-8 flex flex-col flex-grow">
+              <h2 className="flex gap-2 items-center text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
+                Band <PiMicrophoneStageBold className="text-base" />
+              </h2>
+              <h1 className="text-2xl font-bold text-gray-900 mb-4 hover:text-blue-600 transition">
+                <a
+                  href="https://www.youtube.com/channel/UCaHpJ-SkCR604NNBnjM9thQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Young Stunners
+                </a>
+              </h1>
+              <p className="text-gray-600 leading-relaxed flex-grow">
+                Redefining Pakistan’s hip-hop scene with raw talent, authentic
+                stories, and unforgettable beats.
+              </p>
             </div>
           </div>
-          <div className="p-4 md:w-1/3">
-            <div className="h-full border-2 border-gray-400 border-opacity-60 rounded-lg overflow-hidden">
-              <Image
-                className="lg:h-48 md:h-36 w-full object-cover object-center"
-                src="/AUR.jpeg"
-                alt="AUR"
-                width={400}
-                height={700}
-              />
-              <div className="p-6">
-                <h2 className="flex gap-2 tracking-widest text-xs title-font font-medium text-gray-600 mb-1">
-                  Bands <PiMicrophoneStageBold className="text-lg" />
-                </h2>
-                <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                  <a href="https://youtu.be/AX6OrbgS8lI?si=mNUE1X87uZKk7FEh">AUR</a>
-                </h1>
-                <p className="leading-relaxed mb-3">
-                  AUR: A force of unfiltered expression, AUR combines sharp
-                  lyricism with innovative beats, redefining the sound of
-                  Pakistani rap.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="p-4 md:w-1/3">
-            <div className="h-full border-2 border-gray-400 border-opacity-60 rounded-lg overflow-hidden">
-              <Image
-                className="lg:h-48 md:h-36 w-full object-cover object-center"
-                src="/LUG.jpeg"
-                alt="LUG"
-                width={400}
-                height={700}
-              />
-              <div className="p-6">
-                <h2 className="flex gap-2 tracking-widest text-xs title-font font-medium text-gray-600 mb-1">
-                  Bands <PiMicrophoneStageBold className="text-lg" />
-                </h2>
-                <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                  <a href="https://youtu.be/Wy0RlCY9iZo?si=4ofYTNiQBC-nyJ-x">LUG</a>
-                </h1>
-                <p className="leading-relaxed mb-3">
-                Lyari Underground (LUG) amplifies the voice of the streets, 
-                blending raw energy with Balochi pride to create powerful, unfiltered rap anthems.
-                </p>
-              </div>
+
+          {/* Card 2 */}
+          <div className="bg-white rounded-3xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transform transition duration-300 ease-in-out overflow-hidden flex flex-col">
+            <Image
+              src="/AUR.jpeg"
+              alt="AUR"
+              width={400}
+              height={700}
+              className="w-full h-64 object-cover rounded-t-3xl"
+            />
+            <div className="p-8 flex flex-col flex-grow">
+              <h2 className="flex gap-2 items-center text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
+                Band <PiMicrophoneStageBold className="text-base" />
+              </h2>
+              <h1 className="text-2xl font-bold text-gray-900 mb-4 hover:text-blue-600 transition">
+                <a
+                  href="https://www.youtube.com/@aurmusicband"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  AUR
+                </a>
+              </h1>
+              <p className="text-gray-600 leading-relaxed flex-grow">
+                AUR combines sharp lyricism with innovative beats, pushing the
+                boundaries of Pakistani rap with unfiltered expression.
+              </p>
             </div>
           </div>
         </div>
@@ -84,4 +77,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

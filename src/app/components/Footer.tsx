@@ -1,36 +1,61 @@
-import React from 'react'
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
-import { GiMusicalNotes } from 'react-icons/gi'
+import React from "react";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { GiMusicalNotes } from "react-icons/gi";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-400 text-gray-600 body-font">
-  <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-    <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900" href='https://youtu.be/9VVZoNc4EBM?si=NvigEzok_11EGeMl'>
-      <GiMusicalNotes className='text-3xl font-bold'/>
-      <span className="ml-3 text-xl">Urdu Rap And Reality</span>
-    </a>
-    <p className="text-sm text-gray-600 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">
-      <a href="mailto:mubashirmpa2008@gmail.com">© 2020 - mubashirmpa2008@gmail.com</a>
-    </p>
-    <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-      <a className="text-gray-800 text-xl" href='/'>
-       <GiMusicalNotes/>
-      </a>
-      <a className="ml-3 text-gray-800 text-xl" href='https://www.linkedin.com/in/mubashir-khan-538a662bb/'>
-        <FaLinkedin/>
-      </a>
-      <a className="ml-3 text-gray-800 text-xl" href='https://github.com/MubashirKhanYousufZai'>
-        <FaGithub/>
-      </a>
-      <a className="ml-3 text-gray-800 text-xl" href='https://www.instagram.com/talhahanjum'>
-        <FaInstagram/>
-      </a>
-    </span>
-  </div>
-</footer>
+    <footer className="bg-gradient-to-r from-gray-100 via-gray-200 to-red-200 text-gray-900 shadow-inner border-t border-gray-300">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-5 py-6">
+        
+        {/* Left: Logo + Title */}
+        <a
+          href="/"
+          className="flex items-center mb-4 md:mb-0 hover:text-red-600 transition-colors duration-300"
+        >
+          <GiMusicalNotes className="text-2xl text-red-600" />
+          <span className="ml-2 text-lg font-bold tracking-wide">
+            Urdu Rap and Reality
+          </span>
+        </a>
 
-  )
-}
+        {/* Center: Copyright */}
+        <p className="text-sm text-gray-700 mb-4 md:mb-0">
+          © {new Date().getFullYear()} —
+          <a
+            href="mailto:mubashirmpa2008@gmail.com"
+            className="ml-1 hover:underline"
+          >
+            mubashirmpa2008@gmail.com
+          </a>
+        </p>
 
-export default Footer
+        {/* Right: Social Links */}
+        <div className="flex space-x-4 text-xl">
+          <a
+            href="https://www.linkedin.com/in/mubashir-khan-538a662bb/"
+            className="hover:text-blue-600 transition"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://github.com/MubashirKhanYousufZai"
+            className="hover:text-black transition"
+            aria-label="GitHub"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://www.instagram.com/talhahanjum"
+            className="hover:text-pink-500 transition"
+            aria-label="Instagram"
+          >
+            <FaInstagram />
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

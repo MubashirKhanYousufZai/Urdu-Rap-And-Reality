@@ -2,79 +2,85 @@ import Image from "next/image";
 import React from "react";
 import { RiMic2AiLine } from "react-icons/ri";
 
-const page = () => {
+const Page = () => {
   return (
-    <section className="text-gray-600 body-font">
-        <h1 className="text-3xl font-bold text-gray-900 ml-16 mt-4">Producers</h1>
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-wrap -m-4">
-          <div className="p-4 md:w-1/3">
-            <div className="h-full border-2 border-gray-400 border-opacity-60 rounded-lg overflow-hidden">
-              <Image
-                className="lg:h-48 md:h-36 w-full object-cover object-center"
-                src="/Jokhay.jpeg"
-                alt="Jokhay"
-                width={400}
-                height={700}
-              />
-              <div className="p-6">
-                <h2 className="flex gap-2 tracking-widest text-xs title-font font-medium text-gray-600 mb-1">
-                  Producer <RiMic2AiLine className="text-lg" />
-                </h2>
-                <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+    <section className="font-['Inter',sans-serif] text-gray-700 body-font bg-gradient-to-b from-[#fdfdfd] to-[#f4f6f8] min-h-screen">
+      {/* Section Heading */}
+      <div className="container mx-auto px-6 pt-16">
+        <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight relative inline-block mb-14 after:content-[''] after:absolute after:w-16 after:h-1 after:bottom-[-8px] after:left-0">
+          Producers
+        </h1>
+
+        {/* Card Grid */}
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          {/* Card 1 */}
+          <div className="bg-white border border-gray-200 rounded-3xl shadow-md hover:shadow-xl hover:-translate-y-2 transform transition duration-300 ease-in-out flex flex-col">
+            <Image
+              src="/Jokhay.jpeg"
+              alt="Jokhay"
+              width={400}
+              height={300}
+              className="w-full h-60 object-cover rounded-t-3xl"
+            />
+            <div className="p-7 flex flex-col flex-grow">
+              <h2 className="flex items-center gap-2 text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">
+                Producer <RiMic2AiLine className="text-base text-gray-700" />
+              </h2>
+              <h1 className="text-2xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition">
                 <a href="mailto:umairkhanmusic@gmail.com">Jokhay</a>
-                </h1>
-                <p className="leading-relaxed mb-3">
-                Jokhay: A unique voice in Pakistans rap scene, blending thought-provoking lyrics 
-                with powerful storytelling that resonates with raw emotion and authenticity.
-                </p>
-              </div>
+              </h1>
+              <p className="text-gray-600 leading-relaxed flex-grow">
+                Jokhay: A unique voice in Pakistan’s rap scene, blending
+                thought-provoking lyrics with powerful storytelling that
+                resonates with raw emotion and authenticity.
+              </p>
             </div>
           </div>
-          <div className="p-4 md:w-1/3">
-            <div className="h-full border-2 border-gray-400 border-opacity-60 rounded-lg overflow-hidden">
-              <Image
-                className="lg:h-48 md:h-36 w-full object-cover object-center"
-                src="/RWAJ.jpeg"
-                alt="Umair"
-                width={400}
-                height={700}
-              />
-              <div className="p-6">
-                <h2 className="flex gap-2 tracking-widest text-xs title-font font-medium text-gray-600 mb-1">
-                  Producer <RiMic2AiLine className="text-lg" />
-                </h2>
-                <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+
+          {/* Card 2 */}
+          <div className="bg-white border border-gray-200 rounded-3xl shadow-md hover:shadow-xl hover:-translate-y-2 transform transition duration-300 ease-in-out flex flex-col">
+            <Image
+              src="/RWAJ.jpeg"
+              alt="Umair"
+              width={400}
+              height={300}
+              className="w-full h-60 object-cover rounded-t-3xl"
+            />
+            <div className="p-7 flex flex-col flex-grow">
+              <h2 className="flex items-center gap-2 text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">
+                Producer <RiMic2AiLine className="text-base text-gray-700" />
+              </h2>
+              <h1 className="text-2xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition">
                 <a href="mailto:sirenmusicmngmt@gmail.com">Umair</a>
-                </h1>
-                <p className="leading-relaxed mb-3">
-                Umair: A trailblazer in the rap world, blending bold energy and heartfelt 
-                lyrics to create a sound that speaks to the soul and challenges the norm.
-                </p>
-              </div>
+              </h1>
+              <p className="text-gray-600 leading-relaxed flex-grow">
+                Umair: A trailblazer in the rap world, blending bold energy and
+                heartfelt lyrics to create a sound that speaks to the soul and
+                challenges the norm.
+              </p>
             </div>
           </div>
-          <div className="p-4 md:w-1/3">
-            <div className="h-full border-2 border-gray-400 border-opacity-60 rounded-lg overflow-hidden">
-              <Image
-                className="lg:h-48 md:h-36 w-full object-cover object-center"
-                src="/Aur.jpeg"
-                alt="Rafay"
-                width={400}
-                height={700}
-              />
-              <div className="p-6">
-                <h2 className="flex gap-2 tracking-widest text-xs title-font font-medium text-gray-600 mb-1">
-                  Producer <RiMic2AiLine className="text-lg" />
-                </h2>
-                <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+
+          {/* Card 3 */}
+          <div className="bg-white border border-gray-200 rounded-3xl shadow-md hover:shadow-xl hover:-translate-y-2 transform transition duration-300 ease-in-out flex flex-col">
+            <Image
+              src="/rafay.png"
+              alt="Rafay"
+              width={400}
+              height={300}
+              className="w-full h-60 object-cover rounded-t-3xl"
+            />
+            <div className="p-7 flex flex-col flex-grow">
+              <h2 className="flex items-center gap-2 text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">
+                Producer <RiMic2AiLine className="text-base text-gray-700" />
+              </h2>
+              <h1 className="text-2xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition">
                 <a href="mailto:raffeyanwar786@gmail.com">Rafay Anwar</a>
-                </h1>
-                <p className="leading-relaxed mb-3">
-                Rafay Anwar weaves magic through his beats, blending innovation 
+              </h1>
+              <p className="text-gray-600 leading-relaxed flex-grow">
+                Rafay Anwar weaves magic through his beats, blending innovation
                 with soul to create soundscapes that resonate deeply.
-                </p>
-              </div>
+              </p>
             </div>
           </div>
         </div>
@@ -82,4 +88,5 @@ const page = () => {
     </section>
   );
 };
-export default page;
+
+export default Page;
